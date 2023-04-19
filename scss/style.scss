@@ -76,7 +76,8 @@ body {
         transition: 0.4s;
 
         &.active {
-          color: $Soft-red;
+          color: $Very-dark-desaturated-blue;
+          font-weight: 700;
         }
 
         &::after {
