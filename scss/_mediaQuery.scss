@@ -1,0 +1,61 @@
+@media all and (min-width: 950px) {
+  body {
+    .card {
+      width: 900px;
+      flex-direction: row;
+      margin-top: 0;
+
+      .illustration-imgs {
+        display: block;
+        position: relative;
+
+        .cardimg {
+          width: 20rem;
+          position: absolute;
+          left: -21.5%;
+          top: 40%;
+          z-index: 999;
+        }
+
+        .overflow-hidden-imgs {
+          overflow: hidden;
+          height: 100%;
+          position: relative;
+
+          .cardimg2 {
+            width: 45rem;
+            position: relative;
+            left: -15%;
+            top: 47px;
+          }
+
+          .cardimg3 {
+            position: absolute;
+            width: 55rem;
+            left: -38%;
+            top: -35px;
+          }
+        }
+      }
+
+      .illustration-imgs-mble {
+        display: none;
+      }
+
+      .faqs {
+        .title {
+          text-align: start;
+        }
+
+        .qstn {
+          margin: 1rem 0;
+          margin-inline: 0 3rem;
+        }
+
+        .ans {
+          padding-inline: 5px 30px;
+        }
+      }
+    }
+  }
+}

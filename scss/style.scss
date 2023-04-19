@@ -1,0 +1,113 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient($Soft-violet, $Soft-blue);
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  .card {
+    width: 300px;
+    height: 450px;
+    margin-top: 10rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .illustration-imgs {
+      display: none;
+    }
+
+    .illustration-imgs-mble {
+      display: block;
+      position: relative;
+
+      .cardimg2-mble {
+        position: absolute;
+        top: -100%;
+        left: 15%;
+        width: 70%;
+      }
+
+      .cardimg3-mble {
+        width: 70%;
+        position: relative;
+        right: -14%;
+      }
+    }
+
+    .faqs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+
+      .title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $Very-dark-desaturated-blue;
+      }
+
+      .qstn {
+        font-size: 1.2rem;
+        font-weight: 400;
+        cursor: pointer;
+        color: $Very-dark-grayish-blue;
+        border: none;
+        outline: none;
+        margin: 1rem;
+        margin-inline: 2rem;
+        transition: 0.4s;
+
+        &.active {
+          color: $Soft-red;
+        }
+
+        &::after {
+          content: url(../images/icon-arrow-down.svg);
+          float: right;
+        }
+
+        &.active::after {
+          content: url(../images/icon-arrow-down.svg);
+          transform: rotate(180deg);
+        }
+
+        &:hover {
+          color: $Soft-red;
+          transition: 2ms;
+        }
+      }
+
+      .ans {
+        line-height: 1.8;
+        padding-inline: 20px 30px;
+        color: $Very-dark-grayish-blue;
+        font-size: 1.1rem;
+        overflow: hidden;
+        max-height: 0;
+        border-bottom: 0.3px solid $Light-grayish-blue;
+        margin-right: 3rem;
+        transition: max-height 0.2s ease-out;
+      }
+    }
+  }
+}
+
+@import "mediaQuery";
